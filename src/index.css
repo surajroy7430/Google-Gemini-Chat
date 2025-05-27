@@ -13,7 +13,7 @@ body {
 }
 
 .custom-skeleton {
-  background: linear-gradient(110deg, #555563 8%, #3a3a46 18%, #555563 33%);
+  background: linear-gradient(110deg, #454550 8%, #2d2d36 18%, #454550 33%);
   animation: shimmer 1.5s infinite linear;
   background-size: 200% 100%;
   border-radius: 4px;

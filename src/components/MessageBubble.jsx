@@ -32,7 +32,7 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
     >
       {text === "Just a sec..." ? (
         <>
-          <p>{text}</p>
+          <p className="text-xs sm:text-base">{text}</p>
           <div className="my-4">
             <Skeleton count={5} className="custom-skeleton" />
           </div>
@@ -54,7 +54,7 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
 
               if (match) {
                 return (
-                  <div className="relative m-2 rounded-md overflow-hidden sm:text-xs md:text-sm bg-transparent">
+                  <div className="relative m-2 rounded-md overflow-hidden bg-transparent">
                     <div
                       className="text-stone-300 flex justify-between items-center p-4 text-xs bg-[#222222] mb-0.5"
                       style={{ borderRadius: "10px 10px 0 0" }}
@@ -112,7 +112,7 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
             },
 
             p({ children }) {
-              return <p className="m-2">{children}</p>;
+              return <p className="m-2 text-xs sm:text-base">{children}</p>;
             },
           }}
         >
