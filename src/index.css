@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
+*:disabled,
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+body {
+  background-color: #0e0e11;
+  color: #fff;
+}
+
+.custom-skeleton {
+  background: linear-gradient(110deg, #747486 8%, #4f4f5f 18%, #747486 33%);
+  animation: shimmer 1.5s infinite linear;
+  background-size: 200% 100%;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
