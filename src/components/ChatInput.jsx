@@ -67,7 +67,7 @@ const ChatInput = () => {
       let res = await fetchData(body);
       let reply = res?.candidates?.[0]?.content?.parts?.[0]?.text;
       if (reply) {
-        typedText(loadingMessage, reply);
+        updateAssistantMessage(loadingMessage, reply);
       } else {
         updateAssistantMessage(loadingMessage, "No response from Gemini.");
         inputRef.current?.focus();

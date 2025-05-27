@@ -11,7 +11,7 @@ const ChatWindow = () => {
   }, [messages]);
 
   return (
-    <div className="p-4 space-y-2 text-center w-full">
+    <div className="space-y-2 text-center w-full">
       {messages.length === 0 ? (
         <div className="text-gray-300 mt-40">
           <h2 className="text-4xl font-semibold mb-2">Welcome!</h2>

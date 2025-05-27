@@ -26,8 +26,8 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
     <div
       className={`my-4 overflow-hidden shadow-[inset_0_-10px_12px_-6px_rgba(0,0,0,0.5)] ${
         isUser
-          ? "bg-gradient-to-br from-[#1E90FF] to-purple-800 ml-auto text-justify px-4 py-2 mt-15 max-w-[80%] w-fit break-words rounded-[20px_0_20px_20px]"
-          : "bg-gradient-to-bl from-[#4B0082] to-[#2F4F4F] text-justify p-4 max-w-[90%] break-words rounded-[20px_20px_20px_0]"
+          ? "bg-gradient-to-br from-[#363d44] to-[#242a3d] ml-auto text-justify px-4 py-2 mt-15 max-w-[80%] w-fit break-words rounded-[20px_0_20px_20px] overflow-x-auto scrollbar-thin"
+          : "bg-gradient-to-bl from-[#1a161d] to-[#0d1b1b] text-justify p-4 max-w-full break-words rounded-[20px_20px_20px_0]"
       }`}
     >
       {text === "Just a sec..." ? (
@@ -54,7 +54,7 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
 
               if (match) {
                 return (
-                  <div className="relative m-2 rounded-md overflow-hidden bg-transparent">
+                  <div className="relative m-2 rounded-md overflow-hidden sm:text-xs md:text-sm bg-transparent">
                     <div
                       className="text-stone-300 flex justify-between items-center p-4 text-xs bg-[#222222] mb-0.5"
                       style={{ borderRadius: "10px 10px 0 0" }}
@@ -84,9 +84,9 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
                         PreTag="div"
                         customStyle={{
                           margin: 0,
-                          padding: "2rem",
-                          fontSize: ".875rem",
-                          lineHeight: "1.5",
+                          padding: "1rem",
+                          fontSize: ".475rem",
+                          lineHeight: "1.3",
                           wordBreak: "break-word",
                           whiteSpace: "pre-wrap",
                           overflow: "auto",
@@ -104,7 +104,7 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
               } else {
                 return (
                   // Highlighted text
-                  <code className="bg-[#426969] text-[#c7c6c6] py-0.5 px-1 rounded">
+                  <code className="bg-[#1c2c2c] text-[#979797] py-0.5 px-1 rounded">
                     {children}
                   </code>
                 );
