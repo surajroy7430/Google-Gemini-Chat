@@ -114,6 +114,12 @@ const MessageBubble = ({ message: { role, text, timestamp } }) => {
             p({ children }) {
               return <p className="m-2 text-xs sm:text-base">{children}</p>;
             },
+            ul({ children }) {
+              return <ul className="m-2 text-xs sm:text-base">{children}</ul>;
+            },
+            ol({ children }) {
+              return <ol className="m-2 text-xs sm:text-base">{children}</ol>;
+            },
           }}
         >
           {text}
